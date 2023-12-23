@@ -4,8 +4,7 @@ import styles from "./loginPage.module.css";
 import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
-  const { status } = useSession();
-
+  const { data, status } = useSession();
   const router = useRouter();
 
   if (status === "loading") {
@@ -13,9 +12,9 @@ const LoginPage = () => {
   }
 
   if (status === "authenticated") {
-    router.push("/")
+    router.push("/");
   }
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
