@@ -6,7 +6,7 @@ import Comments from "@/components/comments/Comments";
 console.log("URL", process.env.NEXTAUTH_URL);
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3030/api/posts/${slug}`, {
+  const res = await fetch(`http://localhost:8080/api/posts/${slug}`, {
     cache: "no-store",
   });
 

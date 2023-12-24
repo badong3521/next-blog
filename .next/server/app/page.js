@@ -333,7 +333,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 4727:
+/***/ 35528:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50954, 23));
@@ -485,7 +485,7 @@ var categoryList_module_default = /*#__PURE__*/__webpack_require__.n(categoryLis
 
 
 const getData = async ()=>{
-    const res = await fetch("${process.env.NEXTAUTH_URL}/api/categories", {
+    const res = await fetch("http://localhost:3030/api/categories", {
         cache: "no-store"
     });
     if (!res.ok) {
@@ -566,7 +566,7 @@ function Home({ searchParams }) {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,719,739,289,304], () => (__webpack_exec__(20070)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,719,153,289,936], () => (__webpack_exec__(20070)));
 module.exports = __webpack_exports__;
 
 })();

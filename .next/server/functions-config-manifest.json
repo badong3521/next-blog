@@ -1,8 +1,8 @@
 {
   "version": 1,
   "functions": {
-    "/api/comments": {},
     "/api/categories": {},
+    "/api/comments": {},
     "/api/posts/[slug]": {},
     "/api/posts": {}
   }
