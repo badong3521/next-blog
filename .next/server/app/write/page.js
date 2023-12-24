@@ -382,6 +382,18 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
+/***/ 31699:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 31232, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52987, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50831, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 56926, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 44282, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 16505, 23))
+
+/***/ }),
+
 /***/ 13087:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -440,8 +452,12 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = (0,app_dist/* initializeApp */.ZF)(firebaseConfig); // const analytics = getAnalytics(app);
 
+// EXTERNAL MODULE: ./node_modules/next/dist/shared/lib/app-dynamic.js
+var app_dynamic = __webpack_require__(47335);
+var app_dynamic_default = /*#__PURE__*/__webpack_require__.n(app_dynamic);
 ;// CONCATENATED MODULE: ./src/app/write/page.jsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
 
 
 
@@ -453,7 +469,12 @@ const app = (0,app_dist/* initializeApp */.ZF)(firebaseConfig); // const analyti
 const WritePage = ()=>{
     const { status } = (0,react.useSession)();
     const router = (0,navigation.useRouter)();
-    const ReactQuill = dynamic(()=>__webpack_require__.e(/* import() */ 182).then(__webpack_require__.t.bind(__webpack_require__, 12182, 23)), {
+    const ReactQuill = app_dynamic_default()(null, {
+        loadableGenerated: {
+            modules: [
+                "/Users/badong/Desktop/BlogApp/next-blog-new/src/app/write/page.jsx -> " + "react-quill"
+            ]
+        },
         ssr: false
     });
     const [open, setOpen] = (0,react_.useState)(false);
@@ -562,7 +583,7 @@ const WritePage = ()=>{
                         onClick: ()=>setOpen(!open),
                         children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                             src: "/plus.png",
-                            alt: "",
+                            alt: "IMAGE",
                             width: 16,
                             height: 16
                         })
@@ -584,7 +605,7 @@ const WritePage = ()=>{
                                     htmlFor: "image",
                                     children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                         src: "/image.png",
-                                        alt: "",
+                                        alt: "IMAGE",
                                         width: 16,
                                         height: 16
                                     })
@@ -594,7 +615,7 @@ const WritePage = ()=>{
                                 className: (writePage_module_default()).addButton,
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                     src: "/external.png",
-                                    alt: "",
+                                    alt: "IMAGE",
                                     width: 16,
                                     height: 16
                                 })
@@ -603,7 +624,7 @@ const WritePage = ()=>{
                                 className: (writePage_module_default()).addButton,
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                     src: "/video.png",
-                                    alt: "",
+                                    alt: "IMAGE",
                                     width: 16,
                                     height: 16
                                 })
@@ -684,7 +705,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,719,743,153], () => (__webpack_exec__(41742)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,719,794,739], () => (__webpack_exec__(41742)));
 module.exports = __webpack_exports__;
 
 })();

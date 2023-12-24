@@ -13,6 +13,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
+import dynamic from "next/dynamic";
 
 const WritePage = () => {
   const { status } = useSession();
@@ -116,7 +117,7 @@ const WritePage = () => {
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plus.png" alt="" width={16} height={16} />
+          <Image src="/plus.png" alt="IMAGE" width={16} height={16} />
         </button>
         {open && (
           <div className={styles.add}>
@@ -128,14 +129,14 @@ const WritePage = () => {
             />
             <button className={styles.addButton}>
               <label htmlFor="image">
-                <Image src="/image.png" alt="" width={16} height={16} />
+                <Image src="/image.png" alt="IMAGE" width={16} height={16} />
               </label>
             </button>
             <button className={styles.addButton}>
-              <Image src="/external.png" alt="" width={16} height={16} />
+              <Image src="/external.png" alt="IMAGE" width={16} height={16} />
             </button>
             <button className={styles.addButton}>
-              <Image src="/video.png" alt="" width={16} height={16} />
+              <Image src="/video.png" alt="IMAGE" width={16} height={16} />
             </button>
           </div>
         )}

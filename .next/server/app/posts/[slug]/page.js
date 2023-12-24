@@ -351,6 +351,18 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
+/***/ 31699:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 31232, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52987, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50831, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 56926, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 44282, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 16505, 23))
+
+/***/ }),
+
 /***/ 43401:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -399,7 +411,7 @@ const fetcher = async (url)=>{
 };
 const Comments = ({ postSlug })=>{
     const { status } = (0,next_auth_react__WEBPACK_IMPORTED_MODULE_4__.useSession)();
-    const { data, mutate, isLoading } = (0,swr__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .ZP)(`http://localhost:3030/api/comments?postSlug=${postSlug}`, fetcher);
+    const { data, mutate, isLoading } = (0,swr__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .ZP)(`${process.env.NEXTAUTH_URL}/api/comments?postSlug=${postSlug}`, fetcher);
     const [desc, setDesc] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)("");
     const handleSubmit = async ()=>{
         await fetch("/api/comments", {
@@ -570,8 +582,9 @@ const __default__ = proxy.default;
 
 
 
+console.log("URL", process.env.NEXTAUTH_URL);
 const getData = async (slug)=>{
-    const res = await fetch(`http://localhost:3030/api/posts/${slug}`, {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${slug}`, {
         cache: "no-store"
     });
     if (!res.ok) {
@@ -674,7 +687,7 @@ const SinglePage = async ({ params })=>{
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,719,146,153,289], () => (__webpack_exec__(4923)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,719,146,739,289], () => (__webpack_exec__(4923)));
 module.exports = __webpack_exports__;
 
 })();

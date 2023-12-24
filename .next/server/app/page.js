@@ -333,7 +333,7 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 64542:
+/***/ 4727:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50954, 23));
@@ -485,7 +485,7 @@ var categoryList_module_default = /*#__PURE__*/__webpack_require__.n(categoryLis
 
 
 const getData = async ()=>{
-    const res = await fetch("http://localhost:3030/api/categories", {
+    const res = await fetch("${process.env.NEXTAUTH_URL}/api/categories", {
         cache: "no-store"
     });
     if (!res.ok) {
@@ -504,7 +504,7 @@ const CategoryList = async ()=>{
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (categoryList_module_default()).categories,
-                children: data?.map((item)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
+                children: data && data?.map((item)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
                         href: "/blog?cat=style",
                         className: `${(categoryList_module_default()).category} ${(categoryList_module_default())[item.slug]}`,
                         children: [
@@ -566,7 +566,7 @@ function Home({ searchParams }) {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,719,153,289,936], () => (__webpack_exec__(20070)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,719,739,289,304], () => (__webpack_exec__(20070)));
 module.exports = __webpack_exports__;
 
 })();

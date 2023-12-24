@@ -3,6 +3,8 @@ import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
+console.log("URL", process.env.NEXTAUTH_URL);
+
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3030/api/posts/${slug}`, {
     cache: "no-store",
